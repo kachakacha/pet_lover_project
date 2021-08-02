@@ -5,5 +5,5 @@ app_name = 'petlover'
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('category/')
+    path('category/', views.category, name='category')
 ]
