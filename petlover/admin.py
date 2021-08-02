@@ -11,6 +11,7 @@ class PetAdmin(admin.ModelAdmin):
 class CategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug':('species',)}
 
+
 # Register your models here.
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Pet, PetAdmin)
