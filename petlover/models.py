@@ -74,7 +74,7 @@ class UserProfile(models.Model):
     EMAIL_MAX_LENGTH=128
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     # The additional attributes we wish to include.
-    email = models.CharField(max_length=EMAIL_MAX_LENGTH, blank=True)
+    picture = models.ImageField(default=0,blank=True)
 
     def __str__(self):
         return self.user.username

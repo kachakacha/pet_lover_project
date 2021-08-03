@@ -35,9 +35,9 @@
         class="u-align-center-xs u-align-right-lg u-align-right-md u-align-right-sm u-align-right-xl u-clearfix u-image u-section-1"
         id="carousel_106a">
     <div class="u-clearfix u-sheet u-sheet-1">
-        <a href="https://nicepage.com/c/sports-website-templates"
+        <a href="{% url 'petlover:login' %}"
            class="u-active-none u-border-2 u-border-palette-1-base u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-btn-1">Login</a>
-        <a href="https://nicepage.com/k/membership-website-templates"
+        <a href="{% url 'petlover:register' %}"
            class="u-active-none u-border-2 u-border-palette-1-base u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-btn-2">Register</a>
         <h1 class="u-text u-text-1">Welcome to Pet Lover!</h1>
         <h4 class="u-custom-font u-text u-text-2">Love pets, learn pets, and show your pets!</h4>
@@ -87,7 +87,7 @@
                                                <span style="font-weight: 700;">You want to know about...</span>
                                                 <ul>
                                                     {% for category in categories %}
-                                                        <li><span style="font-weight: 700;"><a href="petlover/{{ category.slug }}/">{{ category.species }}</a></span>
+                                                        <li><span style="font-weight: 700;"><a href="petlover/category/{{ category.slug }}/">{{ category.species }}</a></span>
                                                         </li>
                                                     {% endfor %}
                                                 </ul>
@@ -183,16 +183,6 @@
         <p class="u-small-text u-text u-text-variant u-text-1">@PET LOVER BY OREO</p>
     </div>
 </footer>
-<section class="u-backlink u-clearfix u-grey-80">
-    <a class="u-link" href="https://nicepage.com/website-mockup" target="_blank">
-        <span>Website Mockup</span>
-    </a>
-    <p class="u-text">
-        <span>created with</span>
-    </p>
-    <a class="u-link" href="https://nicepage.com/wysiwyg-html-editor" target="_blank">
-        <span>Online HTML Editor</span>
-    </a>.
-</section>
+
 </body>
 </html>
