@@ -26,7 +26,7 @@
 		"name": "PETLOVER"
 }</script>
     <meta name="theme-color" content="#478ac9">
-    <meta property="og:title" content="index">
+    <meta property="og:title" content="Petlover">
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
 </head>
@@ -84,10 +84,10 @@
                                     <div class="u-container-style u-layout-cell u-size-60 u-layout-cell-2">
                                         <div class="u-container-layout u-container-layout-2">
                                             <ol class="u-text u-text-default u-text-1">
+                                               <span style="font-weight: 700;">You want to know about...</span>
                                                 <ul>
                                                     {% for category in categories %}
-                                                        <li><span style="font-weight: 700;"><a
-                                                                href="{{ category.slug }}/">{{ category.species }}</a></span>
+                                                        <li><span style="font-weight: 700;"><a href="petlover/{{ category.slug }}/">{{ category.species }}</a></span>
                                                         </li>
                                                     {% endfor %}
                                                 </ul>

@@ -12,14 +12,11 @@
 {% block body_block %}
     {% if category %}
         <h1>{{ category.species }}</h1>
-        {% if pets %}
-            <ul>
-                {% for pet in pets %}
-                    <li><a href="/petlover/{{ category.slug }}/{{ pet.slug }}">{{ pet.slug }}</a></li>
-                    {% endfor %}
-    </ul>
+        {% if pet %}
+            <h2>{{ pet.pet_name }}</h2>
+            {{ pet.information }}
         {% else %}
-    <strong>No pets currently in category.</strong>
-{% endif %}
+        <strong>No information now.</strong>
+        {% endif %}
     {% endif %}
 {% endblock %}

@@ -12,15 +12,30 @@ def index(request):
 
 
 
-def show_category(request,pet_name_slug):
+def show_category(request,category_name_slug):
     context_dict = {}
     try:
-        category = Category.objects.get(slug=category_prname_slug)
-        pages = Page.objects.filter(category=category)
-        context_dict['pages'] = pages
+        category = Category.objects.get(slug=category_name_slug)
+        pets = Pet.objects.filter(category=category)
+        context_dict['pets'] = pets
         context_dict['category'] = category
 
     except Category.DoesNotExist:
         context_dict['category'] = None
-        context_dict['pages'] = None
-    return render(request, 'rango/category.html', context=context_dict)
+        context_dict['pets'] = None
+    return render(request, 'petlover/category.html', context=context_dict)
+
+def show_pets(request,category_name_slug,pet_name_slug):
+    context_dict = {}
+    try:
+        category = Category.objects.get(slug=category_name_slug)
+        pet = Pet.objects.get(slug=pet_name_slug)
+        context_dict['pet']=pet
+        context_dict['category'] = category
+
+    except Pet.DoesNotExist:
+        context_dict['category'] = None
+        context_dict['pet'] = None
+
+    return render(request, 'petlover/pet_intro.html', context=context_dict)
+

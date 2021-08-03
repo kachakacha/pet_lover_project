@@ -5,7 +5,7 @@ from petlover.models import UserProfile
 # Register your models here.
 
 class PetAdmin(admin.ModelAdmin):
-    list_display = ('category', 'pet_name', 'information', 'views')
+    list_display = ('category', 'pet_name', 'information', 'views','slug')
 
 # Add in this class to customise the Admin Interface
 class CategoryAdmin(admin.ModelAdmin):

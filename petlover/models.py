@@ -31,6 +31,7 @@ class Pet(models.Model):
     information = models.TextField(max_length=TEXT_MAX_LENGTH)
     picture_of_pet = models.ImageField(default=0)
     views = models.IntegerField(default=0)
+    slug = models.SlugField()
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.pet_name)
