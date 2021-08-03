@@ -35,10 +35,16 @@
         class="u-align-center-xs u-align-right-lg u-align-right-md u-align-right-sm u-align-right-xl u-clearfix u-image u-section-1"
         id="carousel_106a">
     <div class="u-clearfix u-sheet u-sheet-1">
+           {% if user.is_authenticated %}
+               <a href="{% url 'petlover:logout' %}"
+           class="u-active-none u-border-2 u-border-palette-1-base u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-btn-1">Logout</a>
+
+            {% else %}
         <a href="{% url 'petlover:login' %}"
            class="u-active-none u-border-2 u-border-palette-1-base u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-btn-1">Login</a>
         <a href="{% url 'petlover:register' %}"
            class="u-active-none u-border-2 u-border-palette-1-base u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-btn-2">Register</a>
+        {% endif %}
         <h1 class="u-text u-text-1">Welcome to Pet Lover!</h1>
         <h4 class="u-custom-font u-text u-text-2">Love pets, learn pets, and show your pets!</h4>
         <div class="u-form u-form-1">
