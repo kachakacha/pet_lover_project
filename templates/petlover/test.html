@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    {% if categories %}
+        <ul>
+            {% for category in categories %}
+                <li>{{ category.species }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <strong>There are no categories present.</strong>
+    {% endif %}
+</div>
+</body>
+</html>
+
+                                                    <ul>
+                                                        {% for category in categories %}
+                                                            <li><a href="{{ category.slug }}/">{{ category.species }}</a></li>
+                                                        {% endfor %}
+                                                    </ul>
